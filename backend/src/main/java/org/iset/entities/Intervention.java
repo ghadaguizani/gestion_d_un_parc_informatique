@@ -16,7 +16,8 @@ public class Intervention {
 	private Long id_inter;
 	private Date date_inter;
 	private String description;
-	
+	private String machine;
+	private String salle;
 	@ManyToMany(mappedBy = "interventions")
 	Set<Technicien> techniciens;
 	
@@ -52,5 +53,34 @@ public class Intervention {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+	public String getMachine() {
+		return machine;
+	}
+	public void setMachine(String machine) {
+		this.machine = machine;
+	}
+	public String getSalle() {
+		return salle;
+	}
+	public void setSalle(String salle) {
+		this.salle = salle;
+	}
+	public Set<Technicien> getTechniciens() {
+		return techniciens;
+	}
+	public void setTechniciens(Set<Technicien> techniciens) {
+		this.techniciens = techniciens;
+	}
+	public Intervention(Long id_inter, Date date_inter, String description, String machine, String salle,
+			Set<Technicien> techniciens) {
+		super();
+		this.id_inter = id_inter;
+		this.date_inter = date_inter;
+		this.description = description;
+		this.machine = machine;
+		this.salle = salle;
+		this.techniciens = techniciens;
+	}
+	
 	
 }

@@ -35,6 +35,7 @@ import { UpdateFournisseurGuard } from './update-fournisseur.guard';
 import { DemanderInterventionComponent } from './add-demande/demander-intervention.component';
 import { SuccesComponent } from './succes/succes.component';
 import { DemandesComponent } from './demandes/demandes.component';
+import { InterventionsComponent } from './interventions/interventions.component';
 const routes: Routes = [
   {path:"materiel",component:MaterielComponent},
   {path:"",component:ImmgComponent} ,
@@ -58,7 +59,8 @@ const routes: Routes = [
   {path:"update-fournisseur/:id",component:UpdateFournisseurComponent,canActivate:[UpdateFournisseurGuard]},
   {path:"demander-intervention",component:DemanderInterventionComponent},
   {path:"succes",component:SuccesComponent},
-  {path:"demandes",component:DemandesComponent}
+  {path:"demandes",component:DemandesComponent},
+  {path:"interventions",component:InterventionsComponent}
 
 
 ];

@@ -1,1 +1,18 @@
-<p>interventions works!</p>
+<div class="container">
+    <div class="card shadow mb-4">
+      <div class="card-body">
+        <table class="table table-striped">
+          <tr> <th>Date intervention</th><th>Description</th>    <th>nom du technicien</th> </tr>
+          <tbody *ngFor="let intervention of Intervention">
+          <tr >
+            <td>{{intervention.date_inter}}</td>
+            <td>{{intervention.description}}</td>
+<td>{{user}}</td>
+           </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+ 

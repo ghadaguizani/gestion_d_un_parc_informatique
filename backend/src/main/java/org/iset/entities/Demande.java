@@ -22,7 +22,7 @@ private String demandeur;
 private String machine;
 private String salle;
 private String description;
-//depart_id;
+
 public Demande() {
 	super();
 	// TODO Auto-generated constructor stub
