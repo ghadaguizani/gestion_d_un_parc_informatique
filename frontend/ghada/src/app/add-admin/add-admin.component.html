@@ -1,0 +1,85 @@
+<div class="container">
+    <div>
+      <h2>Ajouter un Admin :</h2>
+    </div>
+   
+    
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)" ngNativeValidate >
+      <div class="col-sm-2 col-md-2 col-lg-2">
+        <label >nom Admin</label>
+        <input type="text" id="name" [(ngModel)]="newAdmin.nomad"  #nomad="ngModel"
+               name="nom_ad" class="form-control" required minlength="3">
+      </div> 
+      <div *ngIf="nomad.invalid && ( nomad.touched)"
+      class="alert">
+  
+    <div *ngIf="nomad.errors?.['required']">
+      Name is required.
+    </div>
+    <div *ngIf="nomad.errors?.['minlength']">
+      Name must be at least 3 characters long.
+    </div>
+    
+  
+  </div>
+      <div class="col-sm-4 col-md-4 col-lg-4" >
+        <label >Mail Admin</label>
+        <input type="text"[(ngModel)]= "newAdmin.email_ad " #email_ad="ngModel"
+               name="email_ad" class="form-control" required minlength="9">
+      </div>
+      <div *ngIf="email_ad.invalid && (email_ad.touched)"
+      class="alert">
+  
+    <div *ngIf="email_ad.errors?.['required']">
+      Email is required.
+    </div>
+    <div *ngIf="email_ad.errors?.['minlength']">
+      Name must be at least 9 characters long.
+    </div>
+    
+  
+  </div>
+      <div class="col-sm-2 col-md-2 col-lg-2">
+        <label >Mot de passe Admin</label>
+        <input type="password" [(ngModel)]= "newAdmin.mot_de_passe" #mdp_admin="ngModel"
+               name="mdp_admin" class="form-control" required minlength="6">
+      </div>
+      <div *ngIf="mdp_admin.invalid && (mdp_admin.touched)"
+      class="alert">
+  
+    <div *ngIf="mdp_admin.errors?.['required']">
+      Password is required.
+    </div>
+    <div *ngIf="mdp_admin.errors?.['minlength']">
+      Password must be at least 3 characters long.
+    </div>
+    
+  
+  </div>
+  <div class="col-sm-2 col-md-2 col-lg-2">
+    <label >Numero Admin</label>
+    <input type="text" [(ngModel)]= "newAdmin.numero_ad" #numero_ad="ngModel"
+           name="numero_ad" class="form-control" required minlength="8">
+  </div>
+  <div *ngIf="numero_ad.invalid && (numero_ad.touched)"
+  class="alert">
+
+<div *ngIf="numero_ad.errors?.['required']">
+  Numero is required.
+</div>
+<div *ngIf="numero_ad.errors?.['minlength']">
+  Numero must be at least 8 characters long.
+</div>
+
+
+</div>
+   
+      <div class="mt-2">
+        <button type="submit" class="btn btnsuccess">Ajouter</button>
+
+      </div>
+    </form>
+    <br>
+  
+  </div>
+    <h3>{{message}}</h3>

@@ -1,0 +1,30 @@
+<div class="container">
+    <div>
+      <h2>Modifier un Fournisseur :</h2>
+    </div>
+   
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)" ngNativeValidate>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label >id Fournisseur</label>
+            <input readonly type="text" [(ngModel)]="currentFournisseur.id_fournisseur"
+                   name="nom_fournisseur" class="form-control" required>
+          </div> 
+      <div class="col-sm-2 col-md-2 col-lg-2">
+        <label >nom Fournisseur</label>
+        <input type="text" [(ngModel)]="currentFournisseur.nom_fournisseur"
+               name="nom_fournisseur" class="form-control" required>
+      </div> 
+      <div class="col-sm-4 col-md-4 col-lg-4" >
+        <label >Numéro fournisseur</label>
+        <input type="text"[(ngModel)]= "currentFournisseur.numero_fournisseur"
+               name="numero_fournisseur" class="form-control" required minlength="8">
+      </div>
+     
+      
+      <div class="mt-2">
+        <button type="submit"  class="btn btnsuccess">Modifier</button>
+      </div>
+    </form>
+    <br>
+   
+  </div>

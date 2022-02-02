@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="card shadow mb-4">
+      <div class="card-body">
+        <table class="table table-striped">
+          <tr> <th>Id</th><th>Nom de fournisseur</th> <th>Numéro de fournisseur</th>   <th *ngIf="authservice.isAdmin()">action1</th> <th *ngIf="authservice.isAdmin()">action2</th></tr>
+          <tbody *ngFor="let fournisseur of Fournisseur">
+          <tr >
+            <td>{{fournisseur.id_fournisseur}}</td>
+            <td>{{fournisseur.nom_fournisseur}}</td>
+            <td>{{fournisseur.numero_fournisseur}}</td>
+           <td><a *ngIf="authservice.isAdmin()" class="btn btn-danger" (click)="supprimerFournisseur(fournisseur.id_fournisseur)" >supprimer</a></td>
+           <td><a *ngIf="authservice.isAdmin()" class="btn btn-success"[routerLink]="['/update-fournisseur',fournisseur.id_fournisseur]">modifier</a></td>
+
+           
+           </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <!-- <a routerLink="/add-fournisseur">Cliquez ici pour ajouter un nouveau fournisseur</a> -->
+
+  <a *ngIf="authservice.isAdmin()" routerLink="/add-fournisseur"><button>Ajouter un fournisseur</button></a>

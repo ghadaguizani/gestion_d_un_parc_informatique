@@ -1,0 +1,37 @@
+<div class="container">
+    <div>
+      <h2>Modifier un Logiciel:</h2>
+    </div>
+   
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)" ngNativeValidate>
+      <div class="col-sm-2 col-md-2 col-lg-2">
+        <label >nom Logiciel</label>
+        <input type="text" [(ngModel)]="currentLogiciel.nom_logiciel"
+               name="nom_logiciel" class="form-control" required>
+      </div> 
+      <div class="col-sm-4 col-md-4 col-lg-4" >
+        <label >date_installation</label>
+        <input type="date"[ngModel]= "currentLogiciel.date_installation | date: 'yyyy-MM-dd'" 
+        (ngModelChange)=" currentLogiciel.date_installation= $event"
+               name="date_installation" class="form-control" required>
+      </div>
+     
+      <div class="col-sm-4 col-md-4 col-lg-4" >
+        <label >version_installee</label>
+        <input type="text"[(ngModel)]= "currentLogiciel.version_installee"
+               name="version_installee" class="form-control" required>
+      </div>
+      
+      <div class="col-sm-4 col-md-4 col-lg-4" >
+        <label >dernieres_mises_a_jours</label>
+        <input type="text"[(ngModel)]= "currentLogiciel.dernieres_mises_a_jours"
+               name="dernieres_mises_a_jours" class="form-control" required>
+      </div>
+      <div class="mt-2">
+        <button type="submit" class="btn btnsuccess">modifier</button>
+      </div>
+    </form>
+    <br>
+    
+    
+  </div>

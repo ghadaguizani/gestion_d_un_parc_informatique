@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="card shadow mb-4">
+      <div class="card-body">
+        <table class="table table-striped">
+          <tr> <th>DateDemande</th><th>Demandeur</th> <th>machine</th>   <th>salle</th> <th>description</th> <th>état</th></tr>
+          <tbody *ngFor="let demande of Demande">
+          <tr >
+            <td>{{demande.dateDemande}}</td>
+            <td>{{demande.demandeur}}</td>
+            <td>{{demande.machine}}</td>
+            <td>{{demande.salle}}</td>
+           <td>{{demande.description}}</td>
+           <td>
+            <div class="checkbox">
+                <input type="checkbox" id="checkbox" >
+                <label for="checkbox"></label>
+              </div>
+           </td>
+           </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+ 
