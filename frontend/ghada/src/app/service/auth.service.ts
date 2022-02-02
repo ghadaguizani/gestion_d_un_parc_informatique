@@ -83,6 +83,20 @@ if(valideuser==false)
     }
     return this.verif;
   }
+  isTechnicien():Boolean
+  {
+    let value: any = localStorage.getItem('role');
+
+    if(value=="technicien")
+    {
+      this.verif=true;
+    }
+    else
+    {
+      this.verif=false;
+    }
+    return this.verif;
+  }
 
  
     

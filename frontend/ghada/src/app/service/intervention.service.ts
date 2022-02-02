@@ -22,5 +22,11 @@ export class InterventionService {
       data.id;
     }) 
   }
+  supprimIntervention(id:number)
+  {
+    let url="http://localhost:8092/spring/api/supprim-inter/";
+    let baseUrl=url.concat(id.toString());
+    return this.httpClient.delete(baseUrl);
+  }
   
 }

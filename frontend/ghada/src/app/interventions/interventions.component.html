@@ -10,7 +10,7 @@
             <td>{{intervention.machine}}</td>
             <td>{{intervention.salle}}</td>
             <td>{{user}}</td>
-            <td><a class="btn btn-danger" >supprimer</a></td>
+            <td><a class="btn btn-danger" (click)="supprimerIntervention(intervention.id_inter)" >supprimer</a></td>
             <td><a class="btn btn-success" [routerLink]="['/update-intervention',intervention.id_inter]" >modifier</a></td>
            </tr>
           </tbody>
@@ -18,5 +18,5 @@
       </div>
     </div>
   </div>
-  <a  routerLink="/add-intervention"><button class="btn btnsuccess">Ajouter une intervention</button></a>
+  <a *ngIf="authservice.isTechnicien()" routerLink="/add-intervention"><button class="btn btnsuccess">Ajouter une intervention</button></a>
  
