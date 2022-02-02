@@ -38,6 +38,8 @@ InterventionService inS;
 		return inS.addInter(i);
 	}
 
+	
+	
 	@DeleteMapping("/supprim-inter/{id}")
 	@CrossOrigin(origins = "http://localhost:4200")
 
