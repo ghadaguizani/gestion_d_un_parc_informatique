@@ -38,20 +38,28 @@ import { DemandesComponent } from './demandes/demandes.component';
 import { InterventionsComponent } from './interventions/interventions.component';
 import { UpdateInterventionComponent } from './update-intervention/update-intervention.component';
 import { AddInterventionComponent } from './add-intervention/add-intervention.component';
+import { InterventionsGuard } from './interventions.guard';
+import { DemandesGuard } from './demandes.guard';
+import { LogicielsGuard } from './logiciels.guard';
+import { MaterielsGuard } from './materiels.guard';
+import { TechniciensGuard } from './techniciens.guard';
+import { FournisseursGuard } from './fournisseurs.guard';
+import { UpdateInterventionGuard } from './update-intervention.guard';
+import { AddInterventionGuard } from './add-intervention.guard';
 const routes: Routes = [
-  {path:"materiel",component:MaterielComponent},
+  {path:"materiel",component:MaterielComponent,canActivate:[MaterielsGuard]},
   {path:"",component:ImmgComponent} ,
   {path:"admin-connexion",component:AdminConnexionComponent},
   {path:"technicien-authen",component:TechnicienAuthenComponent},
   {path:"admins",component:AdminsComponent,canActivate:[AdminGuard]},
   {path: "forbidden", component: ForbiddenComponent},
   {path:"add-admin",component:AddAdminComponent,canActivate:[AddAdminGuard]},
-  {path:"technicien",component:TechnicienComponent},
+  {path:"technicien",component:TechnicienComponent,canActivate:[TechniciensGuard]},
   {path:"add-technicien",component:AddTechnicienComponent,canActivate:[AddTechnicienGuard]},
-  {path:"logiciel",component:LogicielComponent},
+  {path:"logiciel",component:LogicielComponent,canActivate:[LogicielsGuard]},
   {path:"add-logiciel",component:AddLogicielComponent,canActivate:[AddLogicielGuard]},
   {path:"add-materiel",component:AddMaterielComponent,canActivate:[AddMaterielGuard]},
-  {path:"fournisseur",component:FournisseurComponent},
+  {path:"fournisseur",component:FournisseurComponent,canActivate:[FournisseursGuard]},
   {path:"add-fournisseur",component:AddFournisseurComponent,canActivate:[AddFournisseurGuard]},
   {path:"update-admin/:id",component:UpdateAdminComponent,canActivate:[UpdateAdminGuard]},
   {path:"login",component:LoginComponent},
@@ -61,10 +69,10 @@ const routes: Routes = [
   {path:"update-fournisseur/:id",component:UpdateFournisseurComponent,canActivate:[UpdateFournisseurGuard]},
   {path:"demander-intervention",component:DemanderInterventionComponent},
   {path:"succes",component:SuccesComponent},
-  {path:"demandes",component:DemandesComponent},
-  {path:"interventions",component:InterventionsComponent},
-  {path:"update-intervention/:id",component:UpdateInterventionComponent},
-  {path:"add-intervention",component:AddInterventionComponent}
+  {path:"demandes",component:DemandesComponent,canActivate:[DemandesGuard]},
+  {path:"interventions",component:InterventionsComponent,canActivate:[InterventionsGuard]},
+  {path:"update-intervention/:id",component:UpdateInterventionComponent,canActivate:[UpdateInterventionGuard]},
+  {path:"add-intervention",component:AddInterventionComponent,canActivate:[AddInterventionGuard]}
 
 
 ];
