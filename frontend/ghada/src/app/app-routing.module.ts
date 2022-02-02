@@ -36,6 +36,8 @@ import { DemanderInterventionComponent } from './add-demande/demander-interventi
 import { SuccesComponent } from './succes/succes.component';
 import { DemandesComponent } from './demandes/demandes.component';
 import { InterventionsComponent } from './interventions/interventions.component';
+import { UpdateInterventionComponent } from './update-intervention/update-intervention.component';
+import { AddInterventionComponent } from './add-intervention/add-intervention.component';
 const routes: Routes = [
   {path:"materiel",component:MaterielComponent},
   {path:"",component:ImmgComponent} ,
@@ -60,7 +62,9 @@ const routes: Routes = [
   {path:"demander-intervention",component:DemanderInterventionComponent},
   {path:"succes",component:SuccesComponent},
   {path:"demandes",component:DemandesComponent},
-  {path:"interventions",component:InterventionsComponent}
+  {path:"interventions",component:InterventionsComponent},
+  {path:"update-intervention/:id",component:UpdateInterventionComponent},
+  {path:"add-intervention",component:AddInterventionComponent}
 
 
 ];

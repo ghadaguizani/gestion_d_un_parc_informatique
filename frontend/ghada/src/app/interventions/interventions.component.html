@@ -2,17 +2,21 @@
     <div class="card shadow mb-4">
       <div class="card-body">
         <table class="table table-striped">
-          <tr> <th>Date intervention</th><th>Description</th>    <th>nom du technicien</th> </tr>
+          <tr> <th>Date intervention</th><th>Description</th> <th>machine</th> <th>salle</th>  <th>nom du technicien</th> <th>action1</th> <th>action2</th> </tr>
           <tbody *ngFor="let intervention of Intervention">
           <tr >
             <td>{{intervention.date_inter}}</td>
             <td>{{intervention.description}}</td>
-<td>{{user}}</td>
+            <td>{{intervention.machine}}</td>
+            <td>{{intervention.salle}}</td>
+            <td>{{user}}</td>
+            <td><a class="btn btn-danger" >supprimer</a></td>
+            <td><a class="btn btn-success" [routerLink]="['/update-intervention',intervention.id_inter]" >modifier</a></td>
            </tr>
           </tbody>
         </table>
       </div>
     </div>
   </div>
-
+  <a  routerLink="/add-intervention"><button class="btn btnsuccess">Ajouter une intervention</button></a>
  

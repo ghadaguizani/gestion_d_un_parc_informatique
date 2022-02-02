@@ -9,9 +9,9 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class InterventionService implements IIntervention{
-	@Autowired
-	InterventionRepository inR;
-	public InterventionService(InterventionRepository inR) {
+@Autowired
+InterventionRepository inR;
+public InterventionService(InterventionRepository inR) {
 		super();
 		this.inR = inR;
 	}
@@ -33,7 +33,6 @@ public class InterventionService implements IIntervention{
 	}
 	@Override
 	public Intervention addInter(Intervention i) {
-		// TODO Auto-generated method stub
 		return inR.save(i);
 	}
 	@Override

@@ -5,8 +5,6 @@ export class intervention
     description:string;
     id_tech:number;
     nom_tech:number;
+    salle:string;
+    machine:string;
 }
-/*private Long id_inter;
-	private Date date_inter;
-	private String description;
-	*/ 

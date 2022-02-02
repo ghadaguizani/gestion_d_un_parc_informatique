@@ -3,6 +3,7 @@ package org.iset.Controller;
 import java.util.List;
 
 import org.iset.Service.InterventionService;
+import org.iset.entities.Admin;
 import org.iset.entities.Intervention;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -13,7 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import io.swagger.v3.oas.annotations.parameters.RequestBody;
+import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
 public class InterventionController {
@@ -36,6 +37,7 @@ InterventionService inS;
 	{
 		return inS.addInter(i);
 	}
+
 	@DeleteMapping("/supprim-inter{id}")
 	@CrossOrigin(origins = "http://localhost:4200")
 
