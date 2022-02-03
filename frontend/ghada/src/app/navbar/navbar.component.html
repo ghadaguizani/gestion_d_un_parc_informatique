@@ -1,4 +1,4 @@
-
+<!-- 
    
    <nav class="navbar navbar-expand-lg">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="toggle-navigation">
@@ -34,9 +34,7 @@
         </ul>
         <ul class="navbar-nav ml-auto">
 
-<li class="nav-item">
-  <a class="nav-link" routerLink="login">login</a>
-  </li>
+
   <li>
   <a  class="nav-link"(click)="logout()" >logout</a>
 
@@ -44,7 +42,7 @@
  
         </ul>
         <ul class="navbar-nav ml-auto" >
-          <!-- <li> <a class="nav-link">{{authService.loggedUser}}</a></li> -->
+          <li> <a class="nav-link">{{authService.loggedUser}}</a></li>
                 </ul>
       </div>
     </nav>
@@ -52,4 +50,22 @@
         <div class="box-1"></div>
         <div class="box-2"></div>
       </div>
-   
+    -->
+    <div class="container">
+      <nav class="navbar">
+          <ul>
+            <li></li>
+              <li> <a class="nav-link active" aria-current="page" routerLink="/immg">Home</a></li>
+              <li> <a class="nav-link" routerLink="/admins">admin?</a></li>
+              <li><a class="nav-link" routerLink="/technicien">technicien?</a></li>
+              <li><a class="nav-link" routerLink="/materiel">Matériel?</a></li>
+              <li><a class="nav-link" routerLink="/logiciel">Logiciel?</a></li>
+              <li><a class="nav-link" routerLink="/fournisseur">Fournisseur?</a></li>
+              <li><a class="nav-link" routerLink="/interventions">Interventions</a></li>
+              <li><a class="nav-link" routerLink="/demandes">Les demandes d'intervention</a></li>
+              <li><a class="nav-link"(click)="logout()" >logout</a></li>
+
+            </ul>
+          </nav>
+      
+    </div>

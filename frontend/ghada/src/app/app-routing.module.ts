@@ -48,7 +48,7 @@ import { UpdateInterventionGuard } from './update-intervention.guard';
 import { AddInterventionGuard } from './add-intervention.guard';
 const routes: Routes = [
   {path:"materiel",component:MaterielComponent,canActivate:[MaterielsGuard]},
-  {path:"",component:ImmgComponent} ,
+  {path:"",component:LoginComponent} ,
   {path:"admin-connexion",component:AdminConnexionComponent},
   {path:"technicien-authen",component:TechnicienAuthenComponent},
   {path:"admins",component:AdminsComponent,canActivate:[AdminGuard]},
@@ -72,7 +72,8 @@ const routes: Routes = [
   {path:"demandes",component:DemandesComponent,canActivate:[DemandesGuard]},
   {path:"interventions",component:InterventionsComponent,canActivate:[InterventionsGuard]},
   {path:"update-intervention/:id",component:UpdateInterventionComponent,canActivate:[UpdateInterventionGuard]},
-  {path:"add-intervention",component:AddInterventionComponent,canActivate:[AddInterventionGuard]}
+  {path:"add-intervention",component:AddInterventionComponent,canActivate:[AddInterventionGuard]},
+  {path:"immg",component:ImmgComponent}
 
 
 ];

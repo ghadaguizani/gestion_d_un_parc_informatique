@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Admin } from '../model/admin.model';
 import { User} from '../model/user.model';
 import { AuthService } from '../service/auth.service';
+import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -16,11 +17,11 @@ a:boolean;
     private router: Router) { }
   ngOnInit(): void {
   }
-  onLoggedin()
+  onSubmit(f: NgForm)
   {this.a=this.authservice.signIn(this.user);
     if(this.a)
     {
-      this.router.navigate(['/']);
+      this.router.navigate(['/immg']);
 
     }
     else
