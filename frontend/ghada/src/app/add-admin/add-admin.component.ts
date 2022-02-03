@@ -4,7 +4,7 @@ import { NgForm } from '@angular/forms';
 import { Admin } from '../model/admin.model';
 import { AdminService } from '../service/admin.service';
 import { FormsModule } from '@angular/forms';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-add-admin',
   templateUrl: './add-admin.component.html',
@@ -13,7 +13,7 @@ import { FormsModule } from '@angular/forms';
 export class AddAdminComponent implements OnInit {
   newAdmin = new Admin();
  message: string | undefined;
-  constructor(private httpClient:HttpClient,private adminService: AdminService) { }
+  constructor(private httpClient:HttpClient,private adminService: AdminService,private router:Router) { }
   confirmationString:String ="New admin has been added";  
 isAdded:boolean=false;
   ngOnInit(): void {
@@ -27,6 +27,7 @@ isAdded:boolean=false;
    // document.write("l admin est ajouté"); 
    
    window.alert("L admin est ajouté !");
+this.router.navigate(['admins']);
    isAdded:true;
 
        

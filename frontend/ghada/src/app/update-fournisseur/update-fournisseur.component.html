@@ -1,4 +1,4 @@
-<app-navbar></app-navbar>
+<!-- <app-navbar></app-navbar>
 <div style="height: 90px;"></div>
 
 <div class="container">
@@ -31,3 +31,29 @@
     <br>
    
   </div>
+ -->
+ 
+<app-navbar></app-navbar>
+
+<html>
+   <body>
+
+   
+       <form #f="ngForm" (ngSubmit)="onSubmit(f)" ngNativeValidate >
+           <h3>Modifier un Fournisseur</h3>
+   <div>
+      <!-- <input type="text" id="nom" placeholder="Qui êtes-vous ?"/> -->
+      <input type="text"  [(ngModel)]="currentFournisseur.nom_fournisseur" #nom="ngModel" name="nom" class="form-control" placeholder="Nom" required minlength="3">
+
+      <label for="date">Nom Fournisseur</label>
+   </div>
+   <div>
+    <input  type="number" [(ngModel)]="currentFournisseur.numero_fournisseur" #numero="ngModel" name="numero" class="form-control" placeholder="Numéro" required minlength="8">
+    <label for="numero">Numéro fournisseur</label>
+</div>
+  
+  
+   <input class="button" type="submit" value="Envoyer" />
+</form>
+</body>
+</html>

@@ -24,8 +24,12 @@ console.log(this.currentAdmin);
   
   onSubmit(f: NgForm)
   {
+
     this.adminService.updateAdmin(this.currentAdmin);
+    window.alert("L'admin est modifié avec succés !");
+
     this.router.navigate(['admins']);
+
 
   }
 

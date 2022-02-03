@@ -1,4 +1,4 @@
-<app-navbar></app-navbar>
+<!-- <app-navbar></app-navbar>
 <div style="height: 90px;"></div>
 
 <div class="container">
@@ -34,3 +34,37 @@
     <br>
    
   </div>
+ -->
+ <app-navbar></app-navbar>
+
+<app-navbar></app-navbar>
+
+<html>
+   <body>
+
+   
+       <form #f="ngForm" (ngSubmit)="onSubmit(f)" ngNativeValidate >
+           <h3>Modifier une intervention</h3>
+   <div>
+      <!-- <input type="text" id="nom" placeholder="Qui êtes-vous ?"/> -->
+      <input type="date"  [(ngModel)]="Intervention.date_inter" #date="ngModel" name="date" class="form-control" placeholder="Date" required >
+
+      <label for="date">Date intervention</label>
+   </div>
+   <div>
+    <textarea name="paragraph_text" cols="50" rows="30" [(ngModel)]="Intervention.description" #description="ngModel" name="description" class="form-control" placeholder="Description de l'intervention" required ></textarea>
+    <label for="msg">Description de l'intervention</label>
+</div>
+   <div>
+     <input type="text" [(ngModel)]="Intervention.machine" #machine="ngModel" name="machine" class="form-control" placeholder="Machine"required minlength="3">
+     <label for="machine">Machine</label>
+ </div>
+ <div>
+  <input type="text" [(ngModel)]="Intervention.salle" #salle="ngModel" name="salle" class="form-control" placeholder="Salle"required >
+  <label for="salle">Salle</label>
+</div>
+  
+   <input class="button" type="submit" value="Envoyer" />
+</form>
+</body>
+</html>

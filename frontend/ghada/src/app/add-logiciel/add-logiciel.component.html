@@ -1,39 +1,32 @@
 <app-navbar></app-navbar>
-<div style="height: 90px;"></div>
 
-<div class="container">
+ <html>
+    <body>
+
+    
+        <form #f="ngForm" (ngSubmit)="onSubmit(f)" ngNativeValidate >
+            <h3>Ajouter un Logiciel</h3>
     <div>
-      <h2>Ajouter un Logiciel:</h2>
+       <!-- <input type="text" id="nom" placeholder="Qui êtes-vous ?"/> -->
+       <input type="text"  [(ngModel)]="newLogiciel.nom_logiciel" #nom="ngModel" name="nom" class="form-control" placeholder="Nom du logiciel" required >
+
+       <label for="nom">Nom Logiciel</label>
     </div>
-   
-    <form #f="ngForm" (ngSubmit)="onSubmit(f)" ngNativeValidate>
-      <div class="col-sm-2 col-md-2 col-lg-2">
-        <label >nom Logiciel</label>
-        <input type="text" [(ngModel)]="newLogiciel.nom_logiciel"
-               name="nom_logiciel" class="form-control" required>
-      </div> 
-      <div class="col-sm-4 col-md-4 col-lg-4" >
-        <label >date_installation</label>
-        <input type="date"[(ngModel)]= "newLogiciel.date_installation"
-               name="date_installation" class="form-control" required>
-      </div>
-     
-      <div class="col-sm-4 col-md-4 col-lg-4" >
-        <label >version_installee</label>
-        <input type="text"[(ngModel)]= "newLogiciel.version_installee"
-               name="version_installee" class="form-control" required>
-      </div>
-      
-      <div class="col-sm-4 col-md-4 col-lg-4" >
-        <label >dernieres_mises_a_jours</label>
-        <input type="text"[(ngModel)]= "newLogiciel.dernieres_mises_a_jours"
-               name="dernieres_mises_a_jours" class="form-control" required>
-      </div>
-      <div class="mt-2">
-        <button type="submit" class="btn btnsuccess">Ajouter</button>
-      </div>
-    </form>
-    <br>
-    
-    
+    <div>
+        <input type="date" [(ngModel)]="newLogiciel.date_installation" #date="ngModel" name="date" class="form-control" required >
+        <label for="num">Date installation</label>
+    </div>
+    <div>
+      <input type="text" [(ngModel)]="newLogiciel.version_installee" #version="ngModel" name="version" class="form-control" required >
+      <label for="version">version
+        installée </label>
   </div>
+  <div>
+    <input type="text" [(ngModel)]="newLogiciel.dernieres_mises_a_jours" #mise_a_jours="ngModel" name="mise_a_jours" class="form-control" placeholder="Derniéres mises à jours"required minlength="2">
+    <label for="emplacement">Dernieres mises à jours </label>
+</div>
+
+    <input class="button" type="submit" value="Envoyer" />
+ </form>
+</body>
+</html>

@@ -5,6 +5,7 @@ import { Materiel } from '../model/materiel.model';
 import { MateriellService } from '../service/materiell.service';
 import { FormsModule } from '@angular/forms';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-add-materiel',
   templateUrl: './add-materiel.component.html',
@@ -12,7 +13,7 @@ import { NgForm } from '@angular/forms';
 })
 export class AddMaterielComponent implements OnInit {
   newMateriel = new Materiel();
-  constructor(private httpClient:HttpClient,private materielService: MateriellService) { }
+  constructor(private httpClient:HttpClient,private materielService: MateriellService,private router:Router) { }
  
   ngOnInit(): void {
   }
@@ -34,6 +35,7 @@ export class AddMaterielComponent implements OnInit {
    // document.write("l admin est ajouté"); 
    
    window.alert("Le matériel est ajouté !");
+   this.router.navigate(['materiel']);
    isAdded:true;
 
        

@@ -21,6 +21,7 @@ currentFournisseur:any=new Fournisseur();
   onSubmit(f:NgForm)
   {
     this.fournisseurservice.updateFournisseur(this.currentFournisseur);
+    alert("le fournisseur est modifié avec succés");
     this.router.navigate(['fournisseur']);
   }
 

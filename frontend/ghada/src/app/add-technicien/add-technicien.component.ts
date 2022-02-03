@@ -4,7 +4,7 @@ import { Technicien } from '../model/technicien.model';
 import { TechnicienService } from '../service/technicien.service';
 import { FormsModule } from '@angular/forms';
 import { NgForm } from '@angular/forms';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-add-technicien',
   templateUrl: './add-technicien.component.html',
@@ -13,7 +13,7 @@ import { NgForm } from '@angular/forms';
 export class AddTechnicienComponent implements OnInit {
 
   newTechnicien = new Technicien();
-  constructor(private httpClient:HttpClient,private technicienService: TechnicienService) { }
+  constructor(private httpClient:HttpClient,private technicienService: TechnicienService,private router:Router) { }
   confirmationString:String ="New technicien has been added";  
 isAdded:boolean=false;
   ngOnInit(): void {
@@ -31,6 +31,7 @@ isAdded:boolean=false;
    // document.write("l admin est ajouté"); 
    
    window.alert("Le technicien est ajouté !");
+   this.router.navigate(['technicien']);
    isAdded:true;
 
        

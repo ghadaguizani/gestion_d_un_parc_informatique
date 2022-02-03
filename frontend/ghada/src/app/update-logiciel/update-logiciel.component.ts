@@ -22,6 +22,7 @@ console.log(this.currentLogiciel);
   onSubmit(f:NgForm)
   {
     this.logicielservice.updateLogiciel(this.currentLogiciel);
+    alert("le logiciel est modifié ave succés");
     this.router.navigate(['logiciel']);
   }
 

@@ -1,48 +1,37 @@
 <app-navbar></app-navbar>
-<div style="height: 90px;"></div>
 
-<div class="container">
-    <div>
-      <h2>Ajouter un Materiel :</h2>
-    </div>
-   
-    <form #f="ngForm" (ngSubmit)="onSubmit(f)" ngNativeValidate >
-      
-      <div class="col-sm-4 col-md-4 col-lg-4" >
-        <label >modele du materiel</label>
-        <input type="text"[(ngModel)]= "newMateriel.modele " #modele_du_materiel="ngModel"
-               name="modele_du_materiel" class="form-control" required>
-      </div>
-      
-      <div class="col-sm-2 col-md-2 col-lg-2">
-        <label >date achat</label>
-        <input type="date" [(ngModel)]= "newMateriel.date_achat"
-               name="date_achat" class="form-control" required >
-      </div>
-      <div class="col-sm-4 col-md-4 col-lg-4">
-        <label >date_expiration_garantie</label>
-        <input type="date" [(ngModel)]= "newMateriel.date_expiration_garantie"
-               name="numéro Admin" class="form-control"required >
-      </div>
-      <div class="col-sm-4 col-md-4 col-lg-4">
-        <label >emplacement</label>
-        <input type="text" [(ngModel)]= "newMateriel.emplacement"
-               name="numéro Admin" class="form-control" required>
-      </div>
-      <div class="col-sm-2 col-md-2 col-lg-2">
-        <label >nom du materiel</label>
-        <input type="text" [(ngModel)]="newMateriel.nom_materiel"
-               name="id_ad" class="form-control" required>
-      </div> 
+ <html>
+    <body>
+
     
-     
-      
-      <div class="mt-2">
-        <button type="submit"  class="btn btnsuccess">Ajouter</button>
-      </div>
-    </form>
-    <br>
+        <form #f="ngForm" (ngSubmit)="onSubmit(f)" ngNativeValidate >
+            <h3>Ajouter un nouveau Matériel</h3>
     <div>
-      
-      </div>
+       <!-- <input type="text" id="nom" placeholder="Qui êtes-vous ?"/> -->
+       <input type="text"  [(ngModel)]="newMateriel.modele" #modele="ngModel" name="modele" class="form-control" placeholder="Modéle" required >
+
+       <label for="nom">modele du materiel</label>
+    </div>
+    <div>
+        <input type="date" [(ngModel)]="newMateriel.date_achat" #date="ngModel" name="date" class="form-control" required >
+        <label for="num">Date achat</label>
+    </div>
+    <div>
+      <input type="date" [(ngModel)]="newMateriel.date_expiration_garantie" #date="ngModel" name="date" class="form-control" required >
+      <label for="date">date 
+        expiration garantie </label>
   </div>
+  <div>
+    <input type="text" [(ngModel)]="newMateriel.emplacement" #emplacement="ngModel" name="emplacement" class="form-control" placeholder="Emplacement"required minlength="2">
+    <label for="emplacement">Emplac
+      ement
+       </label>
+</div>
+<div>
+  <input type="text" [(ngModel)]="newMateriel.nom_materiel" #nom="ngModel" name="nom" class="form-control" placeholder="Nom du matériel"required minlength="2">
+  <label for="nom">Nom du materiel</label>
+</div>
+    <input class="button" type="submit" value="Envoyer" />
+ </form>
+</body>
+</html>

@@ -23,7 +23,8 @@ private headers=new Headers({'Content-Type':'application/json'});
   onSubmit(f: NgForm)
 {
   this.technicienservice.updateTechnicien(this.currenttechnicien);
-  this.router.navigate(['technicien']);
+  window.alert("Le technicien est modifié avec succés !");
+   this.router.navigate(['technicien']);
   
 }
 

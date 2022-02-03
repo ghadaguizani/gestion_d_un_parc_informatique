@@ -1,50 +1,30 @@
-<div style="height: 90px;"></div>
 
-<div class="container">
-    <div>
-      <h2>modifier un technicien :</h2>
-    </div>
-   
-    <form #f="ngForm" (ngSubmit)="onSubmit(f)" ngNativeValidate >
-      <div class="col-sm-2 col-md-2 col-lg-2">
-        <label >id Technicien</label>
-        <input readonly type="text" [(ngModel)]="currenttechnicien.id_technicien" #id_technicen="ngModel"
-               name="id_technicen" class="form-control" >
-      </div> 
-      <div class="col-sm-2 col-md-2 col-lg-2">
-        <label >nom Technicien</label>
-        <input type="text" [(ngModel)]="currenttechnicien.nom_technicen" #nom_technicen="ngModel"
-               name="nom_technicen" class="form-control" required minlength="3">
-      </div> 
-      <div *ngIf="nom_technicen.invalid && (nom_technicen.touched)"
-      class="alert">
-  
-    <div *ngIf="nom_technicen.errors?.['required']">
-      Name is required.
-    </div>
-    <div *ngIf="nom_technicen.errors?.['minlength']">
-      Name must be at least 3 characters long.
-    </div>
-    </div>
-      <div class="col-sm-4 col-md-4 col-lg-4" >
-        <label >Numéro technicien</label>
-        <input type="text"[(ngModel)]= "currenttechnicien.num_technicien" #num_technicien="ngModel"
-               name="num_technicien" class="form-control" required minlength="8">
-      </div>
-      <div *ngIf="num_technicien.invalid && (num_technicien.touched)"
-      class="alert">
-  
-    <div *ngIf="num_technicien.errors?.['required']">
-      Phone number is required.
-    </div>
-    <div *ngIf="num_technicien.errors?.['minlength']">
-      Phone number must be  8 characters 
-    </div>
-    </div>
-      <div class="mt-2">
-        <button type="submit"  class="btn btnsuccess">Ajouter</button>
-      </div>
-    </form>
-    <br>
+ 
+ <app-navbar></app-navbar>
+
+ <html>
+    <body>
+
     
+        <form #f="ngForm" (ngSubmit)="onSubmit(f)" ngNativeValidate >
+            <h3>Modifier Technicien</h3>
+    <div>
+       <!-- <input type="text" id="nom" placeholder="Qui êtes-vous ?"/> -->
+       <input type="text"  [(ngModel)]="currenttechnicien.nom_technicen" #nom="ngModel" name="nom" class="form-control" placeholder="Nom" required >
+
+       <label for="nom">Nom Technicien</label>
+    </div>
+    <div>
+        <input type="number" [(ngModel)]="currenttechnicien.num_technicien" #num="ngModel" name="num" class="form-control" placeholder="Numéro"required minlength="6">
+        <label for="num">Numéro technicien</label>
+    </div>
+    <div>
+      <input type="text" [(ngModel)]="currenttechnicien.mdp" #mdp="ngModel" name="mdp" class="form-control" placeholder="Mot de passe"required minlength="4">
+      <label for="mdp">Mot de passe </label>
   </div>
+   
+   
+    <input class="button" type="submit" value="Envoyer" />
+ </form>
+</body>
+</html>

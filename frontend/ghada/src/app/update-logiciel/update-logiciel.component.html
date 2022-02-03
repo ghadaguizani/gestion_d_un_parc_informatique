@@ -1,4 +1,4 @@
-<app-navbar></app-navbar>
+<!-- <app-navbar></app-navbar>
 <div style="height: 90px;"></div>
 
 <div class="container">
@@ -38,3 +38,37 @@
     
     
   </div>
+ -->
+ <app-navbar></app-navbar>
+
+ <html>
+    <body>
+
+    
+        <form #f="ngForm" (ngSubmit)="onSubmit(f)" ngNativeValidate >
+            <h3>Modifier un Logiciel</h3>
+    <div>
+       <!-- <input type="text" id="nom" placeholder="Qui êtes-vous ?"/> -->
+       <input type="text"  [(ngModel)]="currentLogiciel.nom_logiciel" #nom="ngModel" name="nom" class="form-control" placeholder="Nom du logiciel" required >
+
+       <label for="nom">Nom Logiciel</label>
+    </div>
+    <div>
+        <input type="date" [ngModel]="currentLogiciel.date_installation | date:'yyyy-MM-dd'" 
+        (ngModelChange)="currentLogiciel.date_installation= $event" #date="ngModel" name="date" class="form-control" required >
+        <label for="num">Date installation</label>
+    </div>
+    <div>
+      <input type="text" [(ngModel)]="currentLogiciel.version_installee" #version="ngModel" name="version" class="form-control" required >
+      <label for="version">version
+        installée </label>
+  </div>
+  <div>
+    <input type="text" [(ngModel)]="currentLogiciel.dernieres_mises_a_jours" #mise_a_jours="ngModel" name="mise_a_jours" class="form-control" placeholder="Derniéres mises à jours"required minlength="2">
+    <label for="emplacement">Dernieres mises à jours </label>
+</div>
+
+    <input class="button" type="submit" value="Envoyer" />
+ </form>
+</body>
+</html>

@@ -22,7 +22,8 @@ Intervention:any=new intervention();
   onSubmit(f:NgForm)
   {
 this.interventionService.updateIntervention(this.Intervention);
-this.router.navigate(['interventions']);
-  }
+window.alert("L'intervention est modifié avec succés !");
+
+    this.router.navigate(['interventions']);  }
 
 }

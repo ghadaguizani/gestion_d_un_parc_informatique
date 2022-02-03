@@ -46,6 +46,7 @@ import { TechniciensGuard } from './techniciens.guard';
 import { FournisseursGuard } from './fournisseurs.guard';
 import { UpdateInterventionGuard } from './update-intervention.guard';
 import { AddInterventionGuard } from './add-intervention.guard';
+import { HomeGuard } from './home.guard';
 const routes: Routes = [
   {path:"materiel",component:MaterielComponent,canActivate:[MaterielsGuard]},
   {path:"",component:LoginComponent} ,
@@ -73,7 +74,7 @@ const routes: Routes = [
   {path:"interventions",component:InterventionsComponent,canActivate:[InterventionsGuard]},
   {path:"update-intervention/:id",component:UpdateInterventionComponent,canActivate:[UpdateInterventionGuard]},
   {path:"add-intervention",component:AddInterventionComponent,canActivate:[AddInterventionGuard]},
-  {path:"immg",component:ImmgComponent}
+  {path:"immg",component:ImmgComponent,canActivate:[HomeGuard]}
 
 
 ];

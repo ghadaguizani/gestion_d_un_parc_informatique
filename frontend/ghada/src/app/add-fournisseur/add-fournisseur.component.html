@@ -1,28 +1,25 @@
-<app-navbar></app-navbar>
-<div style="height: 90px;"></div>
 
-<div class="container">
-    <div>
-      <h2>Ajouter un Fournisseur :</h2>
-    </div>
+<app-navbar></app-navbar>
+
+<html>
+   <body>
+
    
-    <form #f="ngForm" (ngSubmit)="onSubmit(f)" ngNativeValidate>
-      <div class="col-sm-2 col-md-2 col-lg-2">
-        <label >nom Fournisseur</label>
-        <input type="text" [(ngModel)]="newFournisseur.nom_fournisseur"
-               name="nom_fournisseur" class="form-control" required>
-      </div> 
-      <div class="col-sm-4 col-md-4 col-lg-4" >
-        <label >Numéro fournisseur</label>
-        <input type="text"[(ngModel)]= "newFournisseur.numero_fournisseur"
-               name="numero_fournisseur" class="form-control" required minlength="8">
-      </div>
-     
-      
-      <div class="mt-2">
-        <button type="submit"  class="btn btnsuccess">Ajouter</button>
-      </div>
-    </form>
-    <br>
-   
-  </div>
+       <form #f="ngForm" (ngSubmit)="onSubmit(f)" ngNativeValidate >
+           <h3>Ajouter un Fournisseur</h3>
+   <div>
+      <!-- <input type="text" id="nom" placeholder="Qui êtes-vous ?"/> -->
+      <input type="text"  [(ngModel)]="newFournisseur.nom_fournisseur" #nom="ngModel" name="nom" class="form-control" placeholder="Nom" required minlength="3">
+
+      <label for="date">Nom Fournisseur</label>
+   </div>
+   <div>
+    <input  type="number" [(ngModel)]="newFournisseur.numero_fournisseur" #numero="ngModel" name="numero" class="form-control" placeholder="Numéro" required minlength="8">
+    <label for="numero">Numéro fournisseur</label>
+</div>
+  
+  
+   <input class="button" type="submit" value="Envoyer" />
+</form>
+</body>
+</html>

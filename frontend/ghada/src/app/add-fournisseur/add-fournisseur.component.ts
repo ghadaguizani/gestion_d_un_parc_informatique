@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Fournisseur } from '../model/fournisseur.model';
 import { FournisseurService } from '../service/fournisseur.service';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-add-fournisseur',
   templateUrl: './add-fournisseur.component.html',
@@ -11,7 +12,7 @@ import { NgForm } from '@angular/forms';
 export class AddFournisseurComponent implements OnInit {
 
   newFournisseur = new Fournisseur();
-  constructor(private httpClient:HttpClient,private fournisseurService: FournisseurService) { }
+  constructor(private httpClient:HttpClient,private fournisseurService: FournisseurService,private router:Router) { }
   ;
   ngOnInit(): void {
   }
@@ -23,6 +24,7 @@ export class AddFournisseurComponent implements OnInit {
     this.fournisseurService.addFournisseur(this.newFournisseur);  
 
    window.alert("Le fournisseur est ajouté !");
+   this.router.navigate(['fournisseur']);
    isAdded:true;
 
        

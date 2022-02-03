@@ -45,7 +45,7 @@ adminService.getAllAdmin().subscribe(
 
 
   ngOnInit(): void {
-   
+
   }
 }
 
