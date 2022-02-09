@@ -28,7 +28,7 @@ materiel:any=new Materiel();
 
   }
  addMateriel(newMateriel:Materiel){
-   console.warn(JSON.stringify(newMateriel));
+   //console.warn(JSON.stringify(newMateriel));
    const headers = { 'content-type': 'application/json'}  
    const body=JSON.stringify(newMateriel);
    return  this.httpClient.post<any>('http://localhost:8092/spring/api/add-materiel',body,{'headers':headers}).subscribe(data => {

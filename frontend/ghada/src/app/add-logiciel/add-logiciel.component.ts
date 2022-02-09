@@ -16,20 +16,10 @@ export class AddLogicielComponent implements OnInit {
   
   ngOnInit(): void {
   }
- /* addLogiciel(){
-    console.log(this.newLogiciel);
-    this.logicielService.addLogiciel(this.newLogiciel);   
-    document.write("le logiciel est ajouté"); 
 
-      }*/
       onSubmit(f: NgForm) {
-        /*if (f.valid) {
-          this.message = 'The form is VALID';
-        }
-        if (f.invalid){
-          this.message = 'The form is INVALID';
-        }*/
-        console.log(this.newLogiciel);
+       
+        //console.log(this.newLogiciel);
 
     this.logicielService.addLogiciel(this.newLogiciel);  
    // document.write("l admin est ajouté"); 

@@ -59,9 +59,8 @@
         <label for="num">Date installation</label>
     </div>
     <div>
-      <input type="text" [(ngModel)]="currentLogiciel.version_installee" #version="ngModel" name="version" class="form-control" required >
-      <label for="version">version
-        installée </label>
+      <input type="text" [(ngModel)]="currentLogiciel.poste" #poste="ngModel" name="poste" class="form-control" required >
+      <label for="poste">Poste </label>
   </div>
   <div>
     <input type="text" [(ngModel)]="currentLogiciel.dernieres_mises_a_jours" #mise_a_jours="ngModel" name="mise_a_jours" class="form-control" placeholder="Derniéres mises à jours"required minlength="2">

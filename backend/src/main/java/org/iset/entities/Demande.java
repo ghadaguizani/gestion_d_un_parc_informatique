@@ -22,7 +22,7 @@ private String demandeur;
 private String machine;
 private String salle;
 private String description;
-
+private String etat="non traité";
 public Demande() {
 	super();
 	// TODO Auto-generated constructor stub
@@ -72,6 +72,26 @@ public String getDescription() {
 }
 public void setDescription(String description) {
 	this.description = description;
+}
+
+public String getEtat() {
+	return etat;
+}
+
+public void setEtat(String etat) {
+	this.etat = etat;
+}
+
+public Demande(Long idD, Date dateDemande, String demandeur, String machine, String salle, String description,
+		String etat) {
+	super();
+	this.idD = idD;
+	this.dateDemande = dateDemande;
+	this.demandeur = demandeur;
+	this.machine = machine;
+	this.salle = salle;
+	this.description = description;
+	this.etat = etat;
 }
 
 

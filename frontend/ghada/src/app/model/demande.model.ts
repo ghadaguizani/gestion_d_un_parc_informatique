@@ -5,5 +5,5 @@ export class demande {
     machine:string;
     salle:string;
     description:String;
-
+    etat:string="non traité";
 }

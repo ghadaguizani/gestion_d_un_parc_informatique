@@ -18,14 +18,10 @@ export class AddTechnicienComponent implements OnInit {
 isAdded:boolean=false;
   ngOnInit(): void {
   }
-  /*addTechnicien(){
-    console.log(this.newTechnicien);
-    this.technicienService.addTechnicien(this.newTechnicien);   
-    document.write("le technicien est ajouté");
-      }*/
+  
       onSubmit(f: NgForm) {
        
-        console.log(this.newTechnicien);
+     //   console.log(this.newTechnicien);
 
     this.technicienService.addTechnicien(this.newTechnicien);  
    // document.write("l admin est ajouté"); 

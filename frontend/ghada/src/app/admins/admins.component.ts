@@ -20,6 +20,7 @@ admins:Admin[];
   
 adminService.getAllAdmin().subscribe(
   resp=>{
+    
     this.admins= resp ;
   }
 );

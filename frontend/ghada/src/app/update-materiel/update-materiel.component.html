@@ -9,9 +9,9 @@
             <h3>Modifier un Matériel</h3>
     <div>
        <!-- <input type="text" id="nom" placeholder="Qui êtes-vous ?"/> -->
-       <input type="text"  [(ngModel)]="currentMateriel.modele" #modele="ngModel" name="modele" class="form-control" placeholder="Modéle" required >
+       <input type="text"  [(ngModel)]="currentMateriel.modele" #modele="ngModel" name="modele" class="form-control" placeholder="Marque" required >
 
-       <label for="nom">modele du materiel</label>
+       <label for="nom">Marque du materiel</label>
     </div>
     <div>
         <input type="date" [ngModel]="currentMateriel.date_achat | date:'yyyy-MM-dd'" 
@@ -26,12 +26,12 @@
       <label for="date">date 
         expiration garantie </label>
   </div>
-  <div>
+<!--   <div>
     <input type="text" [(ngModel)]="currentMateriel.emplacement" #emplacement="ngModel" name="emplacement" class="form-control" placeholder="Emplacement"required minlength="2">
     <label for="emplacement">Emplac
       ement
        </label>
-</div>
+</div> -->
 <div>
   <input type="text" [(ngModel)]="currentMateriel.nom_materiel" #nom="ngModel" name="nom" class="form-control" placeholder="Nom du matériel"required minlength="2">
   <label for="nom">Nom du materiel</label>

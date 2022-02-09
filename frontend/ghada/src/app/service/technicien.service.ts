@@ -26,7 +26,7 @@ export class TechnicienService {
 
   }
  addTechnicien(newTechnicien:Technicien){
-   console.warn(JSON.stringify(newTechnicien));
+   //console.warn(JSON.stringify(newTechnicien));
    const headers = { 'content-type': 'application/json'}  
    const body=JSON.stringify(newTechnicien);
    return  this.httpClient.post<any>('http://localhost:8092/spring/api/add-technicien',body,{'headers':headers}).subscribe(data => {

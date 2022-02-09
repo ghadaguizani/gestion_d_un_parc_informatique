@@ -21,7 +21,7 @@ this.interventions=Object.values(res);
    }
    addIntervention(newIntervention:intervention)
    {
-    console.warn(JSON.stringify(newIntervention));
+    //console.warn(JSON.stringify(newIntervention));
     const headers = { 'content-type': 'application/json'}  
     const body=JSON.stringify(newIntervention);  
     this.httpClient.post<any>("http://localhost:8092/spring/api/add-inter",body,{'headers':headers}).subscribe(data=>{

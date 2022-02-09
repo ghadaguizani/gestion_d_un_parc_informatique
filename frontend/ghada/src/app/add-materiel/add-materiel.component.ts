@@ -17,19 +17,10 @@ export class AddMaterielComponent implements OnInit {
  
   ngOnInit(): void {
   }
-  /*addMateriel(){
-    console.log(this.newMateriel);
-    this.materielService.addMateriel(this.newMateriel);  
-    document.write("le matériel est ajouté"); 
-      }*/
+ 
       onSubmit(f: NgForm) {
-        /*if (f.valid) {
-          this.message = 'The form is VALID';
-        }
-        if (f.invalid){
-          this.message = 'The form is INVALID';
-        }*/
-        console.log(this. newMateriel);
+       
+       // console.log(this. newMateriel);
 
     this.materielService.addMateriel(this. newMateriel);  
    // document.write("l admin est ajouté"); 

@@ -35,6 +35,7 @@ import { DemandesComponent } from './demandes/demandes.component';
 import { InterventionsComponent } from './interventions/interventions.component';
 import { AddInterventionComponent } from './add-intervention/add-intervention.component';
 import { UpdateInterventionComponent } from './update-intervention/update-intervention.component';
+import { UpdateDemandeComponent } from './update-demande/update-demande.component';
 
 //const appRoutes:Routes = [{path:'materiels',component:'MaterielsComponent'}];
 @NgModule({
@@ -68,6 +69,7 @@ import { UpdateInterventionComponent } from './update-intervention/update-interv
     InterventionsComponent,
     AddInterventionComponent,
     UpdateInterventionComponent,
+    UpdateDemandeComponent,
     
   ],
   imports: [

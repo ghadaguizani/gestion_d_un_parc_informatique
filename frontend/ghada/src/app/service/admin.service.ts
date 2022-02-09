@@ -28,7 +28,7 @@ admin:any=new Admin();
 
   }
  addAdmin(newAdmin:Admin){
-   console.warn(JSON.stringify(newAdmin));
+   //console.warn(JSON.stringify(newAdmin));
    const headers = { 'content-type': 'application/json'}  
    const body=JSON.stringify(newAdmin);
    return  this.httpClient.post<any>('http://localhost:8092/spring/api/add-admin',body,{'headers':headers}).subscribe(data => {
@@ -38,7 +38,7 @@ admin:any=new Admin();
 
   }
   consulterAdmin(id:number): Admin{
-    console.log(this.admins);
+   // console.log(this.admins);
   this.admin=this.admins.find(p => p.id_ad== id);
   return this.admin;
       }

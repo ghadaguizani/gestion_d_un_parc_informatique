@@ -15,7 +15,7 @@ public class Logiciel {
 	private Long id_logiciel;
 	private String nom_logiciel;
 	private Date date_installation;
-	private String version_installee;
+	private String poste;
 	private String dernieres_mises_a_jours;
 	@ManyToOne
 	private Admin admin;
@@ -23,12 +23,12 @@ public class Logiciel {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Logiciel(Long id_logiciel, Date date_installation, String version_installee,
+	public Logiciel(Long id_logiciel, Date date_installation, String poste,
 			String dernieres_mises_a_jours) {
 		super();
 		this.id_logiciel = id_logiciel;
 		this.date_installation = date_installation;
-		this.version_installee = version_installee;
+		this.poste = poste;
 		this.dernieres_mises_a_jours = dernieres_mises_a_jours;
 	}
 	public Long getId_logiciel() {
@@ -43,11 +43,11 @@ public class Logiciel {
 	public void setDate_installation(Date date_installation) {
 		this.date_installation = date_installation;
 	}
-	public String getVersion_installee() {
-		return version_installee;
+	public String getPoste() {
+		return poste;
 	}
-	public void setVersion_installee(String version_installee) {
-		this.version_installee = version_installee;
+	public void setPoste(String poste) {
+		this.poste = poste;
 	}
 	public String getDernieres_mises_a_jours() {
 		return dernieres_mises_a_jours;
@@ -62,13 +62,13 @@ public class Logiciel {
 		this.admin = admin;
 	}
 	
-	public Logiciel(Long id_logiciel, String nom_logiciel, Date date_installation, String version_installee,
+	public Logiciel(Long id_logiciel, String nom_logiciel, Date date_installation, String poste,
 			String dernieres_mises_a_jours, Admin admin) {
 		super();
 		this.id_logiciel = id_logiciel;
 		this.nom_logiciel = nom_logiciel;
 		this.date_installation = date_installation;
-		this.version_installee = version_installee;
+		this.poste = poste;
 		this.dernieres_mises_a_jours = dernieres_mises_a_jours;
 		this.admin = admin;
 	}

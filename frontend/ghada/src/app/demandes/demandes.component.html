@@ -5,21 +5,17 @@
     <div class="card shadow mb-4">
       <div class="card-body">
         <table class="table table-striped">
-          <tr> <th>DateDemande</th><th>Demandeur</th> <th>machine</th>   <th>salle</th> <th>description</th> <th>état</th></tr>
+          <tr> <th>DateDemande</th><th>Demandeur</th> <th>Composant en panne </th>    <th>description</th> <th>état</th><th *ngIf="authservice.isTechnicien()">action</th></tr>
           <tbody *ngFor="let demande of Demande">
           <tr >
             <td>{{demande.dateDemande}}</td>
             <td>{{demande.demandeur}}</td>
             <td>{{demande.machine}}</td>
-            <td>{{demande.salle}}</td>
            <td>{{demande.description}}</td>
            <td>
-            <div class="checkbox">
-                <input type="checkbox" id="checkbox" >
-                <label for="checkbox"></label>
-              </div>
-           </td>
-           </tr>
+{{demande.etat}}           </td>
+           <td><a *ngIf="authservice.isTechnicien()" class="btn btn-success" [routerLink]="['/update-demande',demande.idD]">modifier</a></td>
+          </tr>
           </tbody>
         </table>
       </div>

@@ -19,7 +19,7 @@ export class AddFournisseurComponent implements OnInit {
   
       onSubmit(f: NgForm) {
        
-        console.log(this.newFournisseur);
+       // console.log(this.newFournisseur);
 
     this.fournisseurService.addFournisseur(this.newFournisseur);  
 

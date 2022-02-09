@@ -1,29 +1,4 @@
-<!-- <div style="height: 40px;"></div>
 
-<form #f="ngForm" (ngSubmit)="onSubmit(f)" ngNativeValidate >
-<div class="col-sm-2 col-md-2 col-lg-2">
-<label>Date demande</label>
-<input type="date" [(ngModel)]="demande.dateDemande" #dateDemande="ngModel" name="dateDemande" class="form-control" required >
-</div>
-<div class="col-sm-2 col-md-2 col-lg-2">
-<label>Demandeur</label>
-<input type="text" [(ngModel)]="demande.demandeur" #demandeur="ngModel" name="demandeur" class="form-control" required minlength="3">
-</div>
-
-<div class="col-sm-2 col-md-2 col-lg-2">
-    <label> Machine </label>
-    <input type="text" [(ngModel)]="demande.machine"  #machine="ngModel" name="machine" class="form-control" required minlength="3">
-    </div>
-<div class="col-sm-2 col-md-2 col-lg-2">
-<label> salle </label>
-<input type="text" [(ngModel)]="demande.salle"  #salle="ngModel" name="salle" class="form-control" required minlength="3">
-</div>
-<div class="col-sm-2 col-md-2 col-lg-2">
-    <label>Description du probléme rencontré</label>
-    <textarea name="paragraph_text" cols="50" rows="10" [(ngModel)]="demande.description" #description="ngModel" name="description" class="form-control" required ></textarea>
-    </div>
-<button type="submit" class="btn btn-danger">envoyer</button>
-</form> -->
 <html>
     <body>
 
@@ -41,13 +16,13 @@
         <label for="Demandeur">Demandeur</label>
     </div>
     <div>
-        <input type="text" [(ngModel)]="demande.machine"  #machine="ngModel" name="machine" class="form-control" placeholder="Machine" required minlength="3">
-        <label for="machine">Machine</label>
+        <input type="text" [(ngModel)]="demande.machine"  #machine="ngModel" name="machine" class="form-control" placeholder="Composant en panne" required minlength="3">
+        <label for="machine">Composant en panne</label>
     </div>
-    <div>
+   <!--  <div>
         <input type="text" [(ngModel)]="demande.salle"  #salle="ngModel" name="salle" class="form-control" placeholder="Salle" required minlength="3">
         <label for="salle">Salle</label>
-    </div>
+    </div> -->
     <div>
         <textarea name="paragraph_text" cols="50" rows="30" [(ngModel)]="demande.description" #description="ngModel" name="description" class="form-control" placeholder="Description du probléme rencontré" required ></textarea>
         <label for="msg">Description du probléme rencontré</label>

@@ -26,7 +26,7 @@ logiciels:Logiciel[];
 
   }
  addLogiciel(newLogiciel:Logiciel){
-   console.warn(JSON.stringify(newLogiciel));
+   //console.warn(JSON.stringify(newLogiciel));
    const headers = { 'content-type': 'application/json'}  
    const body=JSON.stringify(newLogiciel);
    return  this.httpClient.post<any>('http://localhost:8092/spring/api/add-logiciel',body,{'headers':headers}).subscribe(data => {

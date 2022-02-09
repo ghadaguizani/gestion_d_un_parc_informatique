@@ -5,14 +5,13 @@
     <div class="card shadow mb-4">
       <div class="card-body">
         <table class="table table-striped">
-          <tr> <th>Id matériel</th><th>modéle du matériel</th> <th>date d'achat du matériel</th> <th>date d expiration de garantie</th> <th>emplacaement du matériel</th> <th>nom du matériel</th>   <th *ngIf="authservice.isAdmin()">action1</th> <th *ngIf="authservice.isAdmin()">action2</th> </tr>
+          <tr> <th>Id matériel</th><th>Marque du matériel</th> <th>date d'achat du matériel</th> <th>date d expiration de garantie</th>  <th>nom du matériel</th>   <th *ngIf="authservice.isAdmin()">action1</th> <th *ngIf="authservice.isAdmin()">action2</th> </tr>
           <tbody *ngFor="let materiel of Materiel">
           <tr >
             <td>{{materiel.id_materiel}}</td>
             <td>{{materiel.modele}}</td>
             <td>{{materiel.date_achat |date:'dd/MM/yyyy'}}</td>
             <td>{{materiel.date_expiration_garantie |date:'dd/MM/yyyy'}}</td>
-            <td>{{materiel.emplacement}}</td>
             <td>{{materiel.nom_materiel}}</td>
            
                 <td><a *ngIf="authservice.isAdmin()" class="btn btn-danger" (click)="supprimerMateriel(materiel.id_materiel)" >supprimer</a></td>

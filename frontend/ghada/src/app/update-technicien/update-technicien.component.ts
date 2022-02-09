@@ -16,9 +16,9 @@ export class UpdateTechnicienComponent implements OnInit {
 private headers=new Headers({'Content-Type':'application/json'});
 
   ngOnInit(): void {
-    console.log(this.activatedroute.snapshot.params['id']);
+   // console.log(this.activatedroute.snapshot.params['id']);
     this.currenttechnicien=this.technicienservice.consulterTechnicien(this.activatedroute.snapshot.params['id']);
-    console.log(this.currenttechnicien);
+   // console.log(this.currenttechnicien);
   }
   onSubmit(f: NgForm)
 {

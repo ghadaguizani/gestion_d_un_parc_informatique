@@ -14,10 +14,10 @@ currentLogiciel=new Logiciel();
   constructor(private logicielservice:LogicielService,private activatedroute:ActivatedRoute,private router:Router) { }
 
   ngOnInit(): void {
-    console.log(this.activatedroute.snapshot.params['id']);
+   // console.log(this.activatedroute.snapshot.params['id']);
 
 this.currentLogiciel=this.logicielservice.consulterLogiciel(this.activatedroute.snapshot.params['id']);
-console.log(this.currentLogiciel);
+//console.log(this.currentLogiciel);
   }
   onSubmit(f:NgForm)
   {

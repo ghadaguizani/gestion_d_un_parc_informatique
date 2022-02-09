@@ -24,7 +24,7 @@ resp=>{
 
   }
  addFournisseur(newFournisseur:Fournisseur){
-   console.warn(JSON.stringify(newFournisseur));
+   //console.warn(JSON.stringify(newFournisseur));
    const headers = { 'content-type': 'application/json'}  
    const body=JSON.stringify(newFournisseur);
    return  this.httpClient.post<any>('http://localhost:8092/spring/api/add-fournisseur',body,{'headers':headers}).subscribe(data => {

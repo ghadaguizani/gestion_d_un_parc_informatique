@@ -1,0 +1,37 @@
+
+<html>
+    <body>
+
+    
+        <form #f="ngForm" (ngSubmit)="onSubmit(f)" ngNativeValidate >
+            <h3>Demander une intervention !</h3>
+    <div>
+       <!-- <input type="text" id="nom" placeholder="Qui êtes-vous ?"/> -->
+       <input type="date"  [(ngModel)]="currentDemande.dateDemande" #dateDemande="ngModel" name="dateDemande" class="form-control" placeholder="Qui êtes-vous ?" required  readonly="readonly">
+
+       <label for="Date demande">Date demande</label>
+    </div>
+    <div>
+        <input readonly type="text" [(ngModel)]="currentDemande.demandeur" #demandeur="ngModel" name="demandeur" class="form-control" placeholder="Demandeur"required minlength="3">
+        <label for="Demandeur">Demandeur</label>
+    </div>
+    <div>
+        <input readonly type="text" [(ngModel)]="currentDemande.machine"  #machine="ngModel" name="machine" class="form-control" placeholder="Machine" required minlength="3">
+        <label for="machine">Machine</label>
+    </div>
+   <!--  <div>
+        <input type="text" [(ngModel)]="demande.salle"  #salle="ngModel" name="salle" class="form-control" placeholder="Salle" required minlength="3">
+        <label for="salle">Salle</label>
+    </div> -->
+    <div>
+        <textarea readonly name="paragraph_text" cols="50" rows="30" [(ngModel)]="currentDemande.description" #description="ngModel" name="description" class="form-control" placeholder="Description du probléme rencontré" required ></textarea>
+        <label for="msg">Description du probléme rencontré</label>
+    </div>
+     <div>
+        <input  type="text" [(ngModel)]="currentDemande.etat"  #etat="ngModel" name="etat" class="form-control" placeholder="Etat"  required minlength="3" >
+        <label for="etat">Etat</label>
+    </div> 
+    <input class="button" type="submit" value="Envoyer" />
+ </form>
+</body>
+</html>

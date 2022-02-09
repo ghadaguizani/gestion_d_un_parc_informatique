@@ -5,13 +5,13 @@
     <div class="card shadow mb-4">
       <div class="card-body">
         <table class="table table-striped">
-          <tr> <th>Id</th><th>nom du logiciel</th> <th>date installation </th> <th>version installée</th> <th>dernieres_mises_a_jours</th>  <th *ngIf="authservice.isAdmin()">action1</th> <th *ngIf="authservice.isAdmin()">action2</th> </tr>
+          <tr> <th>Id</th><th>nom du logiciel</th> <th>date installation </th> <th>Poste</th> <th>dernieres_mises_a_jours</th>  <th *ngIf="authservice.isAdmin()">action1</th> <th *ngIf="authservice.isAdmin()">action2</th> </tr>
           <tbody *ngFor="let logiciel of Logiciel">
           <tr >
             <td>{{logiciel.id_logiciel}}</td>
             <td>{{logiciel.nom_logiciel}}</td>
             <td>{{logiciel.date_installation |date:'dd/MM/yyyy'}}</td>
-            <td>{{logiciel.version_installee}}</td>
+            <td>{{logiciel.poste}}</td>
             <td>{{logiciel.dernieres_mises_a_jours}}</td>
             <td><a *ngIf="authservice.isAdmin()" class="btn btn-danger" (click)="supprimerLogiciel(logiciel.id_logiciel)" >supprimer</a></td>
             <td><a *ngIf="authservice.isAdmin()" class="btn btn-success" [routerLink]="['/update-logiciel',logiciel.id_logiciel]">modifier</a></td>

@@ -14,7 +14,7 @@ currentFournisseur:any=new Fournisseur();
   constructor(private fournisseurservice:FournisseurService,private activatedroute:ActivatedRoute, private router:Router) { }
 
   ngOnInit(): void {
-    console.log(this.activatedroute.snapshot.params['id']);
+   // console.log(this.activatedroute.snapshot.params['id']);
     this.currentFournisseur=this.fournisseurservice.consulterFournisseur(this.activatedroute.snapshot.params['id']);
     //console.log(this.currentFournisseur);
   }

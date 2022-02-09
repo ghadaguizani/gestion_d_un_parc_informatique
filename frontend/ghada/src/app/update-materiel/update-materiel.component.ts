@@ -13,9 +13,9 @@ currentMateriel=new Materiel();
   constructor(private materielservice:MateriellService,private activatedrouter:ActivatedRoute,private router:Router) { }
 
   ngOnInit(): void {
-    console.log(this.activatedrouter.snapshot.params['id']);
+    //console.log(this.activatedrouter.snapshot.params['id']);
     this.currentMateriel=this.materielservice.consulterMateriel(this.activatedrouter.snapshot.params['id']);
-    console.log(this.currentMateriel);
+   // console.log(this.currentMateriel);
   }
   onSubmit(f:NgForm)
   {
